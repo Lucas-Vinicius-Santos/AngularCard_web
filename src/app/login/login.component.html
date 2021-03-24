@@ -1,0 +1,25 @@
+<section>
+  <form action="#" autocomplete="off">
+    <header>
+      <h1>Login</h1>
+    </header>
+    <div style="--i:1">
+      <mat-form-field appearance="outline" >
+        <mat-label >Login</mat-label>
+        <input id="inputForm" matInput placeholder="Digite seu login">
+        <mat-icon matSuffix>account_circle</mat-icon>
+      </mat-form-field>
+    </div>
+    <div style="--i:2">
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input class="inputForm" matInput type="password" password placeholder="Digite seu senha">
+        <mat-icon matSuffix>remove_red_eye</mat-icon>
+      </mat-form-field>
+    </div>
+    <div style="--i:3" id="div--button">
+      <button mat-flat-button color="primary">Login</button>
+      <a routerLink="/signup">Ainda não possui uma conta? Crie agora</a>
+    </div>
+  </form>
+</section>

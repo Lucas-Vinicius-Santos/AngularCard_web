@@ -1,0 +1,72 @@
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+form {
+  color: aliceblue;
+  width: 400px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border: solid #ccc 1px;
+  border-radius: 0 14px 14px 14px;
+  padding: 14px 0;
+  animation: 1s aparecer;
+
+  background: rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(1.5px);
+}
+
+form>header>h1 {
+  font-size: 1.6rem;
+}
+
+form>div {
+  width: 80%;
+  animation: 1s ease 2s normal forwards 1 aparecer;
+  animation-delay: calc(.4s + .1s * var(--i));
+  opacity: 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+#div--button {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#div--button > button {
+  padding: 7px 32px;
+  width: 100%;
+  
+}
+
+#div--button > a {
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

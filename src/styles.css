@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body { height: 100%; }
+body {
+  height: 100vh;
+  background-image: url(./assets/imgs/purpleSky.jpg);
+  /* background-image: url(./assets/imgs/bg1.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
