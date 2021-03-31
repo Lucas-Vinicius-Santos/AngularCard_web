@@ -1,1 +1,32 @@
-<p>singup works!</p>
+<section>
+  <form id="form" action="#" autocomplete="off">
+    <header>
+      <h1>Sing Up</h1>
+    </header>
+    <div style="--i:1">
+      <mat-form-field appearance="outline" >
+        <mat-label >Login</mat-label>
+        <input id="inputForm" matInput placeholder="Digite seu login">
+        <mat-icon matSuffix>account_circle</mat-icon>
+      </mat-form-field>
+    </div>
+    <div style="--i:2">
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input class="inputForm" matInput type="password" password placeholder="Digite uma senha senha">
+        <mat-icon matSuffix>remove_red_eye</mat-icon>
+      </mat-form-field>
+    </div>
+    <div style="--i:2">
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input class="inputForm" matInput type="password" password placeholder="Digite a senha novamente">
+        <mat-icon matSuffix>remove_red_eye</mat-icon>
+      </mat-form-field>
+    </div>
+    <div style="--i:3" id="div--button">
+      <button mat-flat-button color="primary">Cadastra-se</button>
+      <a routerLink="/login">Ainda não possui uma conta? Crie agora</a>
+    </div>
+  </form>
+</section>
