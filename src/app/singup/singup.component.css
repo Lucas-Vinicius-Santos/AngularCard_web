@@ -19,7 +19,7 @@ form {
   border: solid #ccc 1px;
   border-radius: 0 14px 14px 14px;
   padding: 14px 0;
-  animation: 1s appear-form;
+  animation: .2s appear-form;
 
   background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(1.5px);
@@ -73,7 +73,7 @@ mat-form-field {
 
 @keyframes appear-form {
   from {
-    transform: translateY(-50%);
+    transform: translateY(-10%);
     opacity: 0;
   }
   

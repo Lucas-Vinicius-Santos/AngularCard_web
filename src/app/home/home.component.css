@@ -1,0 +1,78 @@
+section {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.5px);
+  
+}
+nav .linkFiled {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+nav .linkFiled a {
+  text-decoration: none;
+  color: white;
+  transition: .2s;
+}
+nav .linkFiled a:hover {
+  opacity: .8;
+  transform: scale(1.05)
+}
+
+.cardsField {
+  width: 80vw;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cardsField .card{
+  background: rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(.8px);
+
+  border: 1px solid rgba(202, 194, 194, 0.4);
+  border-radius: 14px;
+
+  height: 350px;
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardsField > .card > .title {
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.cardsField > .card > .message {
+  text-align: center;
+  padding: 8px 16px 8px 16px;
+}
+
+.cardsField > .card > .date {
+  text-align: center;
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.4);
+}

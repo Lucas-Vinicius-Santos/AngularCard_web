@@ -10,7 +10,6 @@ html, body { height: 100%; }
 body {
   height: 100vh;
   background-image: url(./assets/imgs/purpleSky.jpg);
-  /* background-image: url(./assets/imgs/bg1.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
