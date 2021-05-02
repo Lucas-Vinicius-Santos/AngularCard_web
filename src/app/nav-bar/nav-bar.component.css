@@ -1,0 +1,31 @@
+
+nav {
+  height: 80px;
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  color: white;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
+  
+}
+nav .linkFiled {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+nav .linkFiled a {
+  text-decoration: none;
+  color: white;
+  transition: .2s;
+}
+nav .linkFiled a:hover {
+  opacity: .8;
+  transform: scale(1.05)
+}

@@ -22,10 +22,11 @@ form {
   animation: .2s appear-form;
 
   background: rgba(0, 0, 0, 0.02);
-  backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(14px);
 }
 
 form>header>h1 {
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -49,16 +50,20 @@ mat-form-field {
   justify-content: center;
 }
 
-#div--button > button {
+#div--button>button {
   padding: 7px 32px;
   width: 100%;
-  
+
 }
 
-#div--button > a {
+#div--button>a {
   margin-top: 5px;
   text-decoration: none;
   color: var(--primary);
+}
+
+#div--button>a>span {
+  color: #1e87a1;
 }
 
 @keyframes appear-input {
@@ -76,7 +81,7 @@ mat-form-field {
     transform: translateY(-10%);
     opacity: 0;
   }
-  
+
   to {
     transform: translateY(0%);
     opacity: 1;

@@ -18,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
 import { HomeComponent } from './home/home.component';
+import { CreateCardComponent } from './create-card/create-card.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
  
 @NgModule({
@@ -25,7 +27,9 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     LoginComponent,
     SingupComponent,
-    HomeComponent
+    HomeComponent,
+    CreateCardComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

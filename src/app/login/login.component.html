@@ -18,8 +18,8 @@
       </mat-form-field>
     </div>
     <div style="--i:3" id="div--button">
-      <button  mat-flat-button color="primary">Login</button>
-      <a routerLink="/signup">Ainda não possui uma conta? Crie agora</a>
+      <button  mat-flat-button color="primary" (click)="logar()">Login</button>
+      <a routerLink="/signup">Ainda não possui uma conta? <span>Crie agora</span></a>
     </div>
   </form>
 </section>
