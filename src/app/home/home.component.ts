@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CardApiService } from '../services/card-api.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,9 +16,20 @@ export class HomeComponent implements OnInit {
     "max-glare": .4
   }
 
-  constructor() { }
+  cards: Array<any> = new Array;
+
+  constructor(private cardService: CardApiService) { }
 
   ngOnInit(): void {
+      this.getCards();
+  }
+
+  getCards() {
+    this.cardService.listarCards().subscribe(cards => {
+      this.cards = cards;
+    }, err => {
+      console.log('Erro ao listar cards', err)
+    });
   }
 
 }

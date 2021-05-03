@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularTiltModule } from 'angular-tilt';
-
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms/'
 
 // Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -21,6 +22,8 @@ import { HomeComponent } from './home/home.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+// Services
+import { CardApiService } from './services/card-api.service'
  
 @NgModule({
   declarations: [
@@ -32,17 +35,19 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     NavBarComponent
   ],
   imports: [
-    BrowserModule,
+    AngularTiltModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
     MatFormFieldModule,
     MatIconModule,
     MatSliderModule,
     MatInputModule,
     MatButtonModule,
-    AngularTiltModule,
+    HttpClientModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [CardApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

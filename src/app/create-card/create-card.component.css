@@ -57,7 +57,7 @@ section {
 }
 
 .card-form-field > .card > .title > input::placeholder {
-  color: #bfe2eb;
+  color: white;
 }
 
 .card-form-field > .card > .message {
@@ -80,17 +80,24 @@ section {
 }
 
 .card-form-field > .card > .message > textarea:focus {
-  outline: none;
   border-bottom: 2px solid #62dc80;
+  outline: none;
 }
 
 .card-form-field > .card > .message > textarea::placeholder {
-  color: #bfe2eb;
+  color: white;
 }
 
-.card-form-field > .card > .date {
+.card-form-field > .card > .submit {
   text-align: center;
   width: 100%;
-  padding: 14px;
-  background: rgba(0, 0, 0, 0.4);
+}
+.card-form-field > .card > .submit > button {
+  background: #7A1EA1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font: 600 bold sans-serif;
+  padding: 14px 0;
+  width: 100%;
 }

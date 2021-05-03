@@ -2,7 +2,6 @@
 nav {
   height: 80px;
   width: 100vw;
-  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,19 +12,19 @@ nav {
   backdrop-filter: blur(14px);
   
 }
-nav .linkFiled {
+nav .linksFiled {
   height: 100%;
   display: flex;
   align-items: center;
   gap: 1em;
 }
 
-nav .linkFiled a {
+nav .linksFiled a {
   text-decoration: none;
   color: white;
   transition: .2s;
 }
-nav .linkFiled a:hover {
+nav .linksFiled a:hover {
   opacity: .8;
   transform: scale(1.05)
 }

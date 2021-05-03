@@ -9,12 +9,11 @@
 }
 html, body { height: 100%; }
 body {
-  height: 100vh;
   background-image: url(./assets/imgs/purpleSky.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   overflow-x: hidden;
+  overflow-y: overlay;
 }
