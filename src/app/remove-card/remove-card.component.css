@@ -1,0 +1,134 @@
+section {
+  width: 100vw;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-remove {
+  display: none;
+
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background:rgba(0, 0, 0, 0.8);
+  z-index: 98;
+}
+
+.modal-remove > .modal-remove-content {
+  background: rgba(255, 255, 255, 0.912);
+  height: 220px;
+  width: 480px;
+  padding: 16px;
+  border-radius: 14px;
+  margin: 30vh auto;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0;
+  transform: scale(0.5);
+  animation: appear .4s ease forwards;
+}
+
+.modal-remove > .modal-remove-content > .body strong {
+  font-weight: 500;
+  color: rgb(70, 12, 12);
+}
+
+.modal-remove > .modal-remove-content > footer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.modal-remove > .modal-remove-content > footer > button {
+  width: 120px;
+  padding: 14px;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 14px;
+  box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.659);
+  cursor: pointer;
+}
+
+.modal-remove > .modal-remove-content > footer > button:hover,
+.modal-remove > .modal-remove-content > footer > button:focus {
+  transform: scale(1.05);
+}
+
+.modal-remove > .modal-remove-content > footer > #cancelar {
+  color: white;
+  background: #2F18AD;
+  border: none;
+}
+.modal-remove > .modal-remove-content > footer > #excluir {
+  color: #C9205B;
+  border: 1px solid #C9205B;
+}
+
+.cardsField {
+  width: 80vw;
+  margin: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cardsField .card{
+  background: rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(202, 194, 194, 0.4);
+  border-radius: 14px;
+
+  height: 350px;
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardsField > .card > .title {
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.cardsField > .card > .message {
+  text-align: center;
+  padding: 8px 16px 8px 16px;
+}
+
+.cardsField > .card > .submit {
+  text-align: center;
+  width: 100%;
+}
+
+.cardsField > .card > .submit > button {
+  background: #7A1EA1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font: 600 bold sans-serif;
+  padding: 14px 0;
+  width: 100%;
+}
+
+@keyframes appear {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

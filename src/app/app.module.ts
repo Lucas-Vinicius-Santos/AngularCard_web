@@ -23,7 +23,8 @@ import { CreateCardComponent } from './create-card/create-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 // Services
-import { CardApiService } from './services/card-api.service'
+import { CardApiService } from './services/card-api.service';
+import { RemoveCardComponent } from './remove-card/remove-card.component'
  
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CardApiService } from './services/card-api.service'
     SingupComponent,
     HomeComponent,
     CreateCardComponent,
-    NavBarComponent
+    NavBarComponent,
+    RemoveCardComponent
   ],
   imports: [
     AngularTiltModule,

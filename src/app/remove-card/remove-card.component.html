@@ -1,0 +1,34 @@
+<section>
+
+  <app-nav-bar></app-nav-bar>
+
+  <div class="modal-remove" [ngStyle]="{'display': display}">
+    <div class="modal-remove-content">
+
+      <header>
+        <h1 class="title">Tem certeza?</h1>
+      </header>
+      <div class="body">
+        <p>Ao pressionar o botão EXCLUIR esse card será apagado <strong>permanentemente</strong></p>
+        <p> <strong> Deseja excluir esse card? </strong> </p>
+      </div>
+      <footer>
+        <button (click)="toggleModal()" id="cancelar">CANCELAR</button>
+        <button (click)="toggleModal()" id="excluir">EXCLUIR</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="cardsField">
+
+    <div class="card" aTilt [tiltSettings]="tiltSettings" *ngFor="let card of cards" (click)="toggleModal()">
+      <header class="title">{{card.title}}</header>
+      <div class="message">{{card.message}}</div>
+      <footer class="submit">
+        <button>Clique para excluir esse card</button>
+      </footer>
+    </div>
+
+  </div>
+
+</section>
