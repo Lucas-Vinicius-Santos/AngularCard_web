@@ -9,11 +9,15 @@ export class CardApiService {
 
   constructor(private http: HttpClient) { }
 
-  listarCards(): Observable<any> {
+  getAllCards(): Observable<any> {
     return this.http.get('http://localhost:3333/');
   }
 
-  cadastrarCard(card): Observable<any> {
+  registerCard(card): Observable<any> {
     return this.http.post('http://localhost:3333/new-card', card)
+  }
+
+  deleteCard(id): Observable<any> {
+    return this.http.post('http://localhost:3333/delete-card', id)
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CardModel } from '../model/CardModel';
 import { CardApiService } from '../services/card-api.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class RemoveCardComponent implements OnInit {
     "max-glare": .4
   }
   cards: Array<any> = new Array;
+  card: CardModel = new CardModel();
   display = 'none';
 
   constructor(private cardService: CardApiService) { }
@@ -24,18 +26,25 @@ export class RemoveCardComponent implements OnInit {
   }
 
   getCards() {
-    this.cardService.listarCards().subscribe(cards => {
+    this.cardService.getAllCards().subscribe(cards => {
       this.cards = cards;
     }, err => {
       console.log('Erro ao listar cards', err)
     });
   }
 
-  toggleModal() {
+  toggleModal(card) {
     if (this.display == 'none') {
-      this.display = 'block'
+      this.display = 'block';
+      this.card = card;
     } else {
-      this.display = 'none'
+      this.display = 'none';
     }
+  }
+
+  deleteCard() {
+    this.cardService.deleteCard(this.card).subscribe();
+    this.toggleModal( new CardModel() )
+    this.getCards();
   }
 }

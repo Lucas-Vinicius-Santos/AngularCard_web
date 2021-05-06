@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   getCards() {
-    this.cardService.listarCards().subscribe(cards => {
+    this.cardService.getAllCards().subscribe(cards => {
       this.cards = cards;
     }, err => {
       console.log('Erro ao listar cards', err)

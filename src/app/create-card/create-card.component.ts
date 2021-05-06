@@ -17,7 +17,7 @@ export class CreateCardComponent implements OnInit {
   }
 
   cadastrarCard() {
-    this.cardService.cadastrarCard(this.card).subscribe();
+    this.cardService.registerCard(this.card).subscribe();
     this.card = new CardModel();
     console.log(this.card)
   }

@@ -13,15 +13,15 @@
         <p> <strong> Deseja excluir esse card? </strong> </p>
       </div>
       <footer>
-        <button (click)="toggleModal()" id="cancelar">CANCELAR</button>
-        <button (click)="toggleModal()" id="excluir">EXCLUIR</button>
+        <button (click)="toggleModal(card)" id="cancelar">CANCELAR</button>
+        <button (click)="deleteCard()" id="excluir">EXCLUIR</button>
       </footer>
     </div>
   </div>
 
   <div class="cardsField">
 
-    <div class="card" aTilt [tiltSettings]="tiltSettings" *ngFor="let card of cards" (click)="toggleModal()">
+    <div class="card" aTilt [tiltSettings]="tiltSettings" *ngFor="let card of cards" (click)="toggleModal(card)">
       <header class="title">{{card.title}}</header>
       <div class="message">{{card.message}}</div>
       <footer class="submit">
