@@ -20,7 +20,9 @@ section {
   background: rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(202, 194, 194, 0.4);
+  border-top: 1px solid rgba(202, 194, 194, 0.4);
+  border-left: 1px solid rgba(202, 194, 194, 0.4);
+  box-shadow: 4px 6px 16px #00000072;
   border-radius: 14px;
 
   height: 350px;

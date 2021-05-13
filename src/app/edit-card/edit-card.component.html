@@ -1,0 +1,36 @@
+<section>
+
+  <app-nav-bar></app-nav-bar>
+
+  <div class="modal-edit" [ngStyle]="{'display': display}">
+    <div class="modal-edit-content">
+
+      <div class="card">
+        <header class="title">
+          <input type="text" value="{{card.title}}" [(ngModel)]="card.title">
+        </header>
+        <div class="message">
+          <textarea value="{{card.message}}" [(ngModel)]="card.message"></textarea>
+        </div>
+        <footer>
+          <button (click)="toggleModal(card)" id="cancelar">CANCELAR</button>
+          <button (click)="editCard()" id="editar">EDITAR</button>
+        </footer>
+      </div>
+        
+    </div>
+  </div>
+
+  <div class="cardsField">
+
+    <div class="card" aTilt [tiltSettings]="tiltSettings" *ngFor="let card of cards" (click)="toggleModal(card)">
+      <header class="title">{{card.title}}</header>
+      <div class="message">{{card.message}}</div>
+      <footer class="submit">
+        <button>Clique para editar esse card</button>
+      </footer>
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,197 @@
+section {
+  width: 100vw;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-edit {
+  display: none;
+
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background:rgba(0, 0, 0, 0.8);
+  z-index: 98;
+}
+
+.modal-edit > .modal-edit-content {
+  color: white; 
+  height: 400px;
+  width: 300px;
+
+  margin: 15vh auto;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0;
+  transform: scale(0.5);
+  animation: appear .4s ease forwards;
+}
+
+.modal-edit > .modal-edit-content > .card {
+  height: 400px;
+  width: 300px;
+  border: 1px solid rgba(202, 194, 194, 0.4);
+
+}
+
+.card-form-field > .card > .title {
+  width: 100%;
+  height: 23%;
+}
+
+.modal-edit-content > .card > .title > input {
+  background: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  border-bottom: 1px solid #bfe2eb;
+  transition: all .2s ease-out;
+  padding: 16px;
+}
+
+.modal-edit-content > .card > .title > input:focus {
+  border-bottom: 2px solid #62dc80;
+  outline: none;
+}
+
+.modal-edit-content > .card > .title > input::placeholder {
+  color: white;
+}
+
+.modal-edit-content > .card > .message {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  padding: 8px 16px 8px 16px;
+}
+
+.modal-edit-content > .card > .message > textarea {
+  background: none;
+  width: 100%;
+  height: 100%;
+  text-align: initial;
+  border: none;
+  color: white;
+  border-bottom: 1px solid #bfe2eb;
+  transition: all .2s ease-in-out;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-edit-content > .card > .message > textarea:focus {
+  border-bottom: 2px solid #62dc80;
+  outline: none;
+}
+
+.modal-edit-content > .card > .message > textarea::placeholder {
+  color: white;
+}
+
+
+.modal-edit > .modal-edit-content footer {
+  background:rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-edit > .modal-edit-content footer > button {
+  width: 120px;
+  padding: 14px;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 14px;
+  box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.659);
+  cursor: pointer;
+}
+
+.modal-edit > .modal-edit-content footer > button:hover,
+.modal-edit > .modal-edit-content footer > button:focus {
+  transform: scale(1.05);
+}
+
+.modal-edit > .modal-edit-content footer > #cancelar {
+  color: white;
+  background: #2F18AD;
+  border: none;
+}
+.modal-edit > .modal-edit-content footer > #editar {
+  color: #7A1EA1;
+  border: 1px solid #7A1EA1;
+}
+
+.cardsField {
+  width: 80vw;
+  margin: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card{
+  color: white; 
+
+  background: rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(14px);
+
+  border-top: 1px solid rgba(202, 194, 194, 0.4);
+  border-left: 1px solid rgba(202, 194, 194, 0.4);
+  box-shadow: 4px 6px 16px #00000072;
+  border-radius: 14px;
+
+  height: 350px;
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card > .title {
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.card > .message {
+  text-align: center;
+  padding: 8px 16px 8px 16px;
+}
+
+.card > .submit {
+  text-align: center;
+  width: 100%;
+}
+
+.card > .submit > button {
+  background: #7A1EA1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font: 600 bold sans-serif;
+  padding: 14px 0;
+  width: 100%;
+}
+
+@keyframes appear {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

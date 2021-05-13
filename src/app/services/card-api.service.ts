@@ -20,4 +20,8 @@ export class CardApiService {
   deleteCard(id): Observable<any> {
     return this.http.post('http://localhost:3333/delete-card', id)
   }
+
+  editCard(card): Observable<any> {
+    return this.http.post('http://localhost:3333/edit-card', card)
+  }
 }

@@ -24,7 +24,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 // Services
 import { CardApiService } from './services/card-api.service';
-import { RemoveCardComponent } from './remove-card/remove-card.component'
+import { RemoveCardComponent } from './remove-card/remove-card.component';
+import { EditCardComponent } from './edit-card/edit-card.component'
  
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RemoveCardComponent } from './remove-card/remove-card.component'
     HomeComponent,
     CreateCardComponent,
     NavBarComponent,
-    RemoveCardComponent
+    RemoveCardComponent,
+    EditCardComponent
   ],
   imports: [
     AngularTiltModule,
