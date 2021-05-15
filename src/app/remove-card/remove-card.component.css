@@ -101,6 +101,11 @@ section {
 
   overflow: hidden;
   cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transform: rotate(20deg);
+  animation: fade ease .2s forwards;
 }
 
 .cardsField > .card > .title {
@@ -132,5 +137,13 @@ section {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transform: rotate(0);
   }
 }

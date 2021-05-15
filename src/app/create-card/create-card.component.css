@@ -33,6 +33,10 @@ section {
   justify-content: space-between;
 
   overflow: hidden;
+
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fade ease .2s forwards;
 }
 
 .card-form-field > .card > .title {
@@ -103,4 +107,11 @@ section {
   font: 600 bold sans-serif;
   padding: 14px 0;
   width: 100%;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -34,6 +34,10 @@ section {
   justify-content: space-between;
 
   overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade ease .2s forwards;
 }
 
 .cardsField > .card > .title {
@@ -51,4 +55,11 @@ section {
   width: 100%;
   padding: 14px;
   background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
