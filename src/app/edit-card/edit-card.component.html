@@ -7,10 +7,10 @@
 
       <div class="card">
         <header class="title">
-          <input type="text" value="{{card.title}}" [(ngModel)]="card.title">
+          <input type="text" value="{{card.title}}" [(ngModel)]="card.title" maxlength="16">
         </header>
         <div class="message">
-          <textarea value="{{card.message}}" [(ngModel)]="card.message"></textarea>
+          <textarea value="{{card.message}}" [(ngModel)]="card.message" maxlength="260"></textarea>
         </div>
         <footer>
           <button (click)="toggleModal(card)" id="cancelar">CANCELAR</button>

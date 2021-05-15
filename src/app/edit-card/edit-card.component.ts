@@ -40,6 +40,7 @@ export class EditCardComponent implements OnInit {
       this.card = card;
     } else {
       this.display = 'none';
+      this.getCards();
     }
   }
 

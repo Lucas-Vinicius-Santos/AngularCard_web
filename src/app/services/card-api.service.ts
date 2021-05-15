@@ -22,6 +22,6 @@ export class CardApiService {
   }
 
   editCard(card): Observable<any> {
-    return this.http.post('http://localhost:3333/edit-card', card)
+    return this.http.put(`http://localhost:3333/edit-card/${card.id}`, card)
   }
 }
